@@ -1,0 +1,14 @@
+{
+    "name": "DestinationDataset",
+    "properties": {
+        "type": "AzureSqlTable",
+        "linkedServiceName": "SQLDBLinkedService",
+        "typeProperties": {
+            "tableName": "<SQL_DB_Table_Name>"
+        },
+        "availability": {
+            "frequency": "Hour",
+            "interval": 1
+        }
+    }
+}

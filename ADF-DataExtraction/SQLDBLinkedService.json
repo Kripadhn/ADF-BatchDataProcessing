@@ -1,0 +1,9 @@
+{
+    "name": "SQLDBLinkedService",
+    "properties": {
+        "type": "AzureSqlDatabase",
+        "typeProperties": {
+            "connectionString": "<SQL_DB_Connection_String>"
+        }
+    }
+}

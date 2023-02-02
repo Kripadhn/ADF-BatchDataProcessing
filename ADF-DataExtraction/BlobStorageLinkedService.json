@@ -1,0 +1,9 @@
+{
+    "name": "BlobStorageLinkedService",
+    "properties": {
+        "type": "AzureBlobStorage",
+        "typeProperties": {
+            "connectionString": "<Blob_Storage_Connection_String>"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+Generating reports and dashboards based on processed data with ADF batch data processing tasks can be done through the following steps:
+1. Create an Azure Data Factory (ADF) instance.
+2. Create a source dataset that represents the processed data. This can be done by creating a new dataset in ADF and pointing it to the location where the processed data is stored (e.g. Azure Data Lake Storage, Azure SQL Database, etc.).
+3. Create a Power BI dataset and dashboard. Power BI can connect to the processed data in the source dataset, and you can use its drag-and-drop interface to build reports and dashboards that visualize the data.
+4. Create a pipeline in ADF that will refresh the Power BI dataset and dashboard. This can be done by using the "Power BI Dataset" activity in ADF, which allows you to refresh a Power BI dataset by specifying the credentials, report ID, and dataset ID.
+In this example, the "Refresh Power BI Report" activity refreshes the Power BI report by specifying the dataset ID, report ID, and credentials in the typeProperties section. The processed data is passed to the Power BI report as an input, which is named "ProcessedData" and linked to an Azure Data Lake Store linked service named "AzureDataLakeStoreLinkedService."
+You will need to replace the placeholders for the dataset ID, report ID, username, and password with the actual values for your Power BI report.
+4. Finally, save and publish the pipeline to make it available for use. You can monitor the pipeline and receive notifications in case of any errors or failures during execution.

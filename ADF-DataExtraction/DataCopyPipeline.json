@@ -1,0 +1,47 @@
+{
+    "name": "DataCopyPipeline",
+    "properties": {
+        "activities": [
+            {
+                "type": "Copy",
+                "typeProperties": {
+                    "source": {
+                        "type": "BlobSource"
+                    },
+                    "sink": {
+                        "type": "SqlSink",
+                        "writeBatchSize": 0,
+                        "writeBatchTimeout": "00:00:00"
+                    }
+                },
+                "inputs": [
+                    {
+                        "name": "SourceDataset"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "name": "DestinationDataset"
+                    }
+                ],
+                "policy": {
+                    "concurrency": 1,
+                    "executionPriorityOrder": "OldestFirst",
+                    "retry": 3,
+                    "timeout": "01:00:00"
+                },
+                "scheduler": {
+                    "frequency":
+                    "Hour",
+                    "interval": 1
+                    },
+                    "name": "CopyActivity"
+                    }
+                    ],
+                    "start": "2020-01-01T00:00:00Z",
+                    "end": "2099-01-01T00:00:00Z",
+                    "isPaused": false,
+                    "hubName": "ADF_Hub",
+                    "pipelineMode": "Regular"
+                    }
+                    }

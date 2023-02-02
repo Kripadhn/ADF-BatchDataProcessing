@@ -1,0 +1,1 @@
+az adf run start --name DataCopyPipeline --resource-group <Resource_Group_Name> --factory-name <ADF_Name>

@@ -1,0 +1,15 @@
+{
+    "name": "SourceDataset",
+    "properties": {
+        "type": "AzureBlob",
+        "linkedServiceName": "BlobStorageLinkedService",
+        "typeProperties": {
+            "folderPath": "<Blob_Storage_Folder_Path>",
+            "fileName": "<Source_File_Name>"
+        },
+        "availability": {
+            "frequency": "Hour",
+            "interval": 1
+        }
+    }
+}
